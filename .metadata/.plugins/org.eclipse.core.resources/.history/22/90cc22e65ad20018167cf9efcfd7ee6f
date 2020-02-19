@@ -1,0 +1,54 @@
+package controller;
+
+import model.BusPOA;
+import model.BusPOADAO;
+import service.ServiceConsumeJSOn;
+
+import java.io.IOException;
+import java.util.ArrayList;
+
+import org.json.JSONArray;
+
+
+
+public class ControllerServiceConsumeJSOn {
+
+	String sJSonBusPOA[];
+	String codigo;
+	String nome;
+	String id;
+	
+	public void saveBusPoa() throws IOException {
+		
+		ServiceConsumeJSOn serviceConsumeJSOn = new ServiceConsumeJSOn();
+		String responseJsonBusPOA = serviceConsumeJSOn.connectionURL("http://www.poatransporte.com.br/php/facades/process.php?a=nc&p=%&t=o");
+		
+		ArrayList<String> arrayS = new ArrayList<>();
+		String sArray[];
+		String id, codigo, nome;
+		
+		try {
+            
+            JSONArray jsonArray = new JSONArray(objectResponseUrl.toString());
+            
+            for (int i = 0; i < jsonArray.length(); i++) {
+            	arrayS.add(jsonArray.get(i).toString());
+            	sArray = arrayS.get(i).split(",");
+            	codigo = sArray[0].replace("{", "").replace("\"", "").replace("id:", "").replace("}", "");
+            	nome = sArray[1].replace("{", "").replace("\"", "").replace("id:", "").replace("}", "");
+            	id = sArray[2].replace("{", "").replace("\"", "").replace("id:", "").replace("}", "");
+            	
+            	PointBus pointBus = new PointBus(codigo, nome, id);
+            	pointBusDAO.savePointBus(pointBus);
+            	
+            	System.out.println(pointBusDAO.searchPointBus().get(i).getId()+
+            			pointBusDAO.searchPointBus().get(i).getCodigo()+
+            	pointBusDAO.searchPointBus().get(i).getNome());
+			}
+            
+        } catch (JSONException ex) {
+            ex.printStackTrace();
+
+        }
+	}
+}

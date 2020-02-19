@@ -1,0 +1,5 @@
+#GlassFish 3
+#Tue Oct 23 22:57:51 BRST 2018
+org.eclipse.jst.jee.server\:WebServiceConsumeJSOn=C\:\\faculdade\\Faculdade\\2018\\2semestre\\servicoWEB\\glassfishOP\\glassfish\\domain\\eclipseApps\\WebServiceConsumeJSOn
+org.eclipse.jst.jee.server\:WebServiceConsumeURLJSOn=C\:\\faculdade\\Faculdade\\2018\\2semestre\\servicoWEB\\glassfishOP\\glassfish\\domain\\eclipseApps\\WebServiceConsumeURLJSOn
+org.eclipse.jst.jee.server\:Teste=C\:\\faculdade\\Faculdade\\2018\\2semestre\\servicoWEB\\glassfishOP\\glassfish\\domain\\eclipseApps\\Teste

@@ -1,0 +1,12 @@
+import service.ServiceBusPOAServiceLocator;
+
+public class TesteView {
+
+	public static void main(String[] args) {
+		ServiceBusPOAServiceLocator srv = new ServiceBusPOAServiceLocator();
+		
+		
+
+	}
+
+}

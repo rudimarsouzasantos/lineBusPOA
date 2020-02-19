@@ -1,0 +1,34 @@
+package service;
+
+import java.io.IOException;
+import java.util.ArrayList;
+
+import javax.jws.WebMethod;
+import javax.jws.WebService;
+
+import model.BusPOADAO;
+import model.BusPOA;
+import util.Json;
+
+@WebService
+public class ServiceBusPOA {
+	
+	@WebMethod
+	public ArrayList<BusPOA> searchAll() {
+		
+		Json json = new Json();
+		try {
+			json.readJson();
+		} catch (IOException msg) {
+			msg.getMessage();
+		}
+		return BusPOADAO.searchAll();
+	}
+	
+	public void teste() {
+		for (int i = 0; i < BusPOADAO.searchAll().size(); i++) {
+			
+		}
+	}
+
+}

@@ -1,0 +1,35 @@
+package controller;
+
+import java.util.ArrayList;
+
+import model.BusPOABO;
+import model.BusPOADAO;
+import util.Json;
+
+public class ControllerDAOBusPOA {
+	
+	String id, codigo, nome;
+	
+	Json jsonBusPOA = new Json();
+	BusPOABO busPOABO = new BusPOABO();
+	ArrayList<String> arrayListJsonBusPOA;
+	
+	public void saveJson() {
+		
+		try {
+			for (int i = 0; i < jsonBusPOA.readJson().size(); i++) {
+				id = jsonBusPOA.readJson().get(i);
+				codigo = jsonBusPOA.readJson().get(i + 1);
+				nome = jsonBusPOA.readJson().get(i+ 2 );
+				busPOABO.save(id, codigo, nome);
+			}
+			
+		} catch (Exception msg) {
+			msg.getMessage();
+		}
+		
+		
+		
+	}
+
+}

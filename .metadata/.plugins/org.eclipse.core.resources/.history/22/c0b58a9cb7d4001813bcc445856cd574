@@ -1,0 +1,13 @@
+package controller;
+
+import util.Json;
+
+public class ControllerDAOBusPOA {
+	
+	Json jsonBusPOA = new Json();
+	
+	public void saveJson() {
+		
+	}
+
+}

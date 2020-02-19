@@ -1,0 +1,24 @@
+package service;
+
+import java.io.IOException;
+
+import model.BusPOADAO;
+import util.Json;
+
+public class ServiceBusPOA {
+	
+	BusPOADAO busPOADAO = new BusPOADAO();
+	
+	public void teste() {
+		
+		Json json = new Json();
+		
+		try {
+			json.readJson();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+}

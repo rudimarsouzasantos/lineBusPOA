@@ -1,0 +1,24 @@
+package controller;
+
+import util.Json;
+
+public class ControllerDAOBusPOA {
+	
+	Json jsonBusPOA = new Json();
+	
+	public void saveJson() {
+		
+		try {
+			for (int i = 0; i < jsonBusPOA.readJson().size(); i++) {
+				
+			}
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		
+		
+		
+	}
+
+}

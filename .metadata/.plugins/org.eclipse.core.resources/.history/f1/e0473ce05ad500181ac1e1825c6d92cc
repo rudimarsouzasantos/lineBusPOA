@@ -1,0 +1,21 @@
+import service.ServiceBusPOA;
+import service.ServiceBusPOAServiceLocator;
+
+public class TesteView {
+
+	public static void main(String[] args) {
+		ServiceBusPOAServiceLocator serviceLocator = new ServiceBusPOAServiceLocator();
+		ServiceBusPOA clienteService;
+		
+		try {
+			
+			clienteService = serviceLocator.getServiceBusPOAPort();
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		
+
+	}
+
+}

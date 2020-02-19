@@ -1,0 +1,47 @@
+package controller;
+
+import model.BusPOA;
+import model.BusPOADAO;
+import netscape.javascript.JSObject;
+import service.ServiceConsumeJSOn;
+
+import java.io.IOException;
+
+import org.json.JSONArray;
+
+
+
+public class ControllerServiceConsumeJSOn {
+
+	String sJSonBusPOA[];
+	String codigo;
+	String nome;
+	String id;
+	
+	public void saveBusPoa() throws IOException {
+		
+		ServiceConsumeJSOn serviceConsumeJSOn = new ServiceConsumeJSOn();
+		String responseJsonBusPOA = serviceConsumeJSOn.connectionURL("http://www.poatransporte.com.br/php/facades/process.php?a=nc&p=%&t=o");
+		
+		try {
+			
+			
+			JSObject jSonArrayBusPOA = new JSObject(responseJsonBusPOA);
+			BusPOADAO busPOADAO = new BusPOADAO();
+			
+			for (int i = 0; i < jSonArrayBusPOA.length(); i++) {
+				sJSonBusPOA = jSonArrayBusPOA.get(i).toString().split(",");
+				codigo = sJSonBusPOA[0].replace("{", "").replace("\"", "").replace("id:", "").replace("}", "");
+				nome = sJSonBusPOA[1].replace("{", "").replace("\"", "").replace("id:", "").replace("}", "");
+				id = sJSonBusPOA[2].replace("{", "").replace("\"", "").replace("id:", "").replace("}", "");
+				
+				BusPOA busPOA = new BusPOA(id, codigo, nome);
+				busPOADAO.save(busPOA);
+			}
+
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+		}			
+	}
+}

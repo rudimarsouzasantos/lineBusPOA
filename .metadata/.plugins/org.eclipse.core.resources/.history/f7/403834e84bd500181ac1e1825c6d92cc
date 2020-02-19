@@ -1,0 +1,25 @@
+package service;
+
+import java.io.IOException;
+import java.util.ArrayList;
+
+import model.BusPOADAO;
+import model.BusPOA;
+import util.Json;
+
+public class ServiceBusPOA {
+	
+	public ArrayList<BusPOA> teste() {
+		
+		Json json = new Json();
+		
+		try {
+			json.readJson();
+		} catch (IOException msg) {
+			msg.getMessage();
+		}
+		return BusPOADAO.searchAll();
+	
+	}
+
+}

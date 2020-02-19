@@ -1,0 +1,19 @@
+package model;
+
+public class BusPOA {
+	
+	private String id;
+	private String codigo;
+	private String nome;	
+	
+	public BusPOA(String id, String codigo, String nome) {
+		super();
+		this.id = id;
+		this.codigo = codigo;
+		this.nome = nome;
+	}
+	
+	
+	
+
+}

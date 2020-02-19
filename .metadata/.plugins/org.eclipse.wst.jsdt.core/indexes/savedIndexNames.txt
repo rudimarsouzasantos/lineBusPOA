@@ -1,0 +1,7 @@
+INDEX VERSION 1.4+C:\faculdade\Faculdade\2018\2semestre\progrmacaoObjDst\trabalhoFinal\LineBusPOA\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+1994021922.index
+1896607378.index
+657782140.index
+1079681324.index
+2346653446.index
+2242402621.index

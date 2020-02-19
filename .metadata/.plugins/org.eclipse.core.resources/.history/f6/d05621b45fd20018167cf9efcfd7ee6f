@@ -1,0 +1,18 @@
+package controller;
+
+import org.json.JSONArray;
+
+public class ControllerServiceConsumeJSOn {
+	
+	public void saveBusPoa() {
+		
+		try {
+			
+			JSONArray jSonArrayBusPOA;
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
+
+}

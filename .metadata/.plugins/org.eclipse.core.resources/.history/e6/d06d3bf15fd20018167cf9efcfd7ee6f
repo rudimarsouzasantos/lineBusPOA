@@ -1,0 +1,23 @@
+package controller;
+
+import org.json.JSONArray;
+
+import service.ServiceConsumeJSOn;
+
+public class ControllerServiceConsumeJSOn {
+	
+	public void saveBusPoa() {
+		
+		ServiceConsumeJSOn serviceConsumeJSOn = new ServiceConsumeJSOn();
+		String reponseURLJsonBusPOA = serviceConsumeJSOn.connectionURL("")
+		try {
+			
+			 
+			JSONArray jSonArrayBusPOA = new JSONArray();
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
+
+}

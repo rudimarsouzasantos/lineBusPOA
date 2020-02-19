@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<modules>
+  <module moduleId="org.eclipse.jst.jee.server:WebServiceConsumeURLJSOn" serverId="GlassFish 4 [domain]"/>
+  <module moduleId="org.eclipse.jst.jee.server:WebService" serverId="GlassFish 4 [domain]"/>
+  <module moduleId="org.eclipse.jst.jee.server:WebServiceConsumeJSOn" serverId="GlassFish 4 [domain]"/>
+  <module moduleId="org.eclipse.jst.jee.server:Teste" serverId="GlassFish 4 [domain]"/>
+</modules>

@@ -1,0 +1,32 @@
+package model;
+
+import java.util.ArrayList;
+
+public class BusPOADAO {
+	
+	static ArrayList<BusPOA> arrayBusPoa;
+	ArrayList<BusPOA> arrayBusPoaSearch;
+	
+	public BusPOADAO() {
+		arrayBusPoa = new ArrayList<>();
+	}
+	
+	public void save(BusPOA busPOA) {
+		arrayBusPoa.add(busPOA);
+	}
+	
+	private ArrayList<BusPOA> searchID(String id){
+		 
+		return arrayBusPoaSearch;
+	}
+	
+	private ArrayList<BusPOA> searchName(String nome){
+		return arrayBusPoaSearch;
+	}
+	
+	
+	static public ArrayList<BusPOA> searchAll(){
+		return arrayBusPoa;
+	}
+
+}

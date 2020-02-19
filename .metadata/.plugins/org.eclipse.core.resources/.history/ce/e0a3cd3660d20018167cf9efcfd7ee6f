@@ -1,0 +1,25 @@
+package controller;
+
+import java.io.IOException;
+
+import org.json.JSONArray;
+
+import service.ServiceConsumeJSOn;
+
+public class ControllerServiceConsumeJSOn {
+	
+	public void saveBusPoa() throws IOException {
+		
+		ServiceConsumeJSOn serviceConsumeJSOn = new ServiceConsumeJSOn();
+		String reponseURLJsonBusPOA = serviceConsumeJSOn.connectionURL("http://www.poatransporte.com.br/php/facades/process.php?a=nc&p=%&t=o");
+		try {
+			
+			 
+			JSONArray jSonArrayBusPOA = new JSONArray(reponseURLJsonBusPOA);
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
+
+}

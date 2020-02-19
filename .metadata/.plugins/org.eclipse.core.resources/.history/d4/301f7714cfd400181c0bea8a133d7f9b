@@ -1,0 +1,21 @@
+package service;
+
+import java.io.IOException;
+
+import util.Json;
+
+public class ServiceBusPOA {
+	
+	public void teste() {
+		
+		Json j = new Json();
+		
+		try {
+			j.readJson();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+}

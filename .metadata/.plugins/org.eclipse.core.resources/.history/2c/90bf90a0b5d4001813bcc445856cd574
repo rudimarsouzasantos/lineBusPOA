@@ -1,0 +1,13 @@
+package model;
+
+import java.util.ArrayList;
+
+public class BusPOABO {
+	
+	ArrayList<String> arrayListJSON;
+	
+	public BusPOABO() {
+		arrayListJSON = new ArrayList<>();
+	}
+
+}

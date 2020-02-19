@@ -1,0 +1,14 @@
+package util;
+
+public class StringFormat {
+	
+	public String formatString(String json) {
+		
+		String jsonFormated;
+		
+		jsonFormated = json.replace(", ,", "").replace(",{", "");
+		
+		return jsonFormated;
+	}
+
+}
